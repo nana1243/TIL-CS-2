@@ -1,0 +1,27 @@
+package search;
+
+public class seqSearch {
+		// 요소의 갯수가 n인 배열에서 key와 같은 요소를 선형검색
+	public static int Search(int[] arr, int n, int key) {
+		int i = 0;
+
+		while (i < n) {
+			if (arr[i] == key) {
+				return i;
+			}
+			i++;
+		}
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		int n = arr.length;
+		int k = 4;
+
+		int idx = Search(arr, n, k);
+		System.out.println(idx);
+
+	}
+
+}
